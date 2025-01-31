@@ -15,9 +15,7 @@ db = DbHandler()
 fetch_update = FetcherUpdater()
 
 # update BTC
-if db.table_exists('btc_hourly'):
-    update_df = fetch_update.add_price_data(crypto='BTC', table='btc_hourly')
-    
+update_df = fetch_update.add_price_data(crypto='BTC', table='btc_hourly')
 db.save_to_db(update_df, 'btc_hourly')
 
 
@@ -26,7 +24,9 @@ update_df = fetch_update.add_price_data(crypto='ETH', table='eth_hourly')
 db.save_to_db(update_df, 'eth_hourly')
 
 
-
+# update SOL
+update_df = fetch_update.add_price_data(crypto='SOL', table='sol_hourly')
+db.save_to_db(update_df, 'sol_hourly')
 
 
 
