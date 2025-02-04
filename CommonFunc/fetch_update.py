@@ -11,8 +11,8 @@ import time
 from datetime import datetime, timezone
 import pandas as pd
 
-from CommonFunc.crypto_api import CryptoAPI
-from CommonFunc.db_handler import DbHandler
+from commonfunc.crypto_api import CryptoAPI
+from commonfunc.db_handler import DbHandler
 
 class FetcherUpdater:
 
