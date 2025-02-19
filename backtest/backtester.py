@@ -116,6 +116,7 @@ class Backtester:
                 df.loc[i,'pnl'] = 0
         
         self.results_df = df
+        
         return df
             
             
@@ -127,7 +128,7 @@ class Backtester:
         final_capital = self.current_capital
         profit = final_capital - self.initial_capital
         roi_percentage = (profit / self.initial_capital) * 100
-        max_drawdown = self._calculate_max_drawdown(self.result_df['capital'])
+        max_drawdown = self._calculate_max_drawdown(self.results_df['capital'])
         
         report = {
             'Initial Capital': self.initial_capital,
