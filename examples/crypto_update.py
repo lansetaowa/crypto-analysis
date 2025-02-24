@@ -6,6 +6,7 @@ Created on Sun Jan 26 21:46:31 2025
 
 Function that updates all price data.
 """
+import os
 
 from commonfunc.db_handler import DbHandler
 from commonfunc.fetch_update import FetcherUpdater
@@ -39,7 +40,9 @@ def update_crypto_prices(cryptos, db):
             print(f"Error updating {crypto}: {e}")
 
 
+
 db = DbHandler()
+# print(os.getcwd())
 
 # List of cryptocurrencies to update
 cryptos = ['BTC', 'ETH', 'SOL']
